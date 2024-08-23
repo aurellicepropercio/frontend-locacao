@@ -1,0 +1,6 @@
+usuarios: nomeusuario - email - senha - contato
+estabelecimentos: descricao - valor - localizacao - contato - responsavel - foto
+locacões: idestabelecimento - idcliente - valor - datainicio - horarioinicio -datafinal -horafinal
+clientes: nomecliente - endereco - contato - email
+
+pagamentos:
