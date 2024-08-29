@@ -15,7 +15,10 @@ export default function Cadastrocliente(){
     const [contato,setContato] = useState("");
     const [email,setEmail] = useState("");
     const cliente={
-      nomecliente, endereco, contato, email
+      endereco_cleinte:endereco, 
+      contato_cliente:contato, 
+      email_cliente:email,
+      nome_cliente:nomecliente
     }
     function salvardados(e){
         e.preventDefault();
@@ -70,11 +73,14 @@ export default function Cadastrocliente(){
 
                 <div className='form-container'>
                     <form className='form-cadastro' onSubmit={salvardados} >
-                        <input type='text' value={nome} onChange={e=>setNome(e.target.value)} placeholder='Digite o nome do usuário' />
+                        
+                        <input type='text' value={nomecliente} onChange={e=>setNomecliente(e.target.value)} placeholder='Digite o nome do cliente' />
 
-                        <input type='email' value={email} onChange={e=>setEmail(e.target.value)} placeholder='Digite o email' />
+                        <input type='number' value={contato} onChange={e=>setContato(e.target.value)} placeholder='Informe o numero' />
 
-                        <input type='password'value={senha} onChange={e=>setSenha(e.target.value)} placeholder='Digite a senha' />
+                        <input type='text'value={endereco} onChange={e=>setEndereco(e.target.value)} placeholder='Informe o endereço' />
+                        
+                        <input type='email'value={email} onChange={e=>setEmail(e.target.value)} placeholder='Informe o email' />
                     
                     
                        <div className='pai-botton'>

@@ -8,7 +8,7 @@ import {useNavigate,useParams} from 'react-router-dom';
 import Head from '../../componentes/Head';
 import api from '../../server/api';
 
-export default function editarlocacao(){
+export default function Editarlocacao(){
   let { id } = useParams();
   const navigate =useNavigate();
   const [id_estabelecimento,setId_estabelecimento]  = useState("");
@@ -17,7 +17,7 @@ export default function editarlocacao(){
   const [datainicio,setDatainicio] = useState([]);
   const [horarioinicio, setHorarioinicio] = useState(true);
   const [datafinal, setDatafinal] = useState(true);
-  const [horariodinal, setHorariofinal] = useState(true);
+  const [horariofinal, setHorariofinal] = useState(true);
   const [datacadastro, setDatacadastro] = useState(true);
   
   const locacao={     
@@ -39,14 +39,14 @@ export default function editarlocacao(){
   async function mostrardados(id) {
    api.get(`/locacao/${id}`)
    .then((resposta)=>{
-    setNome(resposta.data.id_estabelecimento);
-    setEmail(resposta.data.id_cliente);
-    setSenha(resposta.data.valor);
-    setSenha(resposta.data.datainicio);
-    setSenha(resposta.data.horarioinicio);
-    setSenha(resposta.data.datafinal);
-    setSenha(resposta.data.horariofinal);
-    setSenha(resposta.data.datacadastro);
+    setId_estabelecimento(resposta.data.id_estabelecimento);
+    setId_cliente(resposta.data.id_cliente);
+    setValor(resposta.data.valor);
+    setDatainicio(resposta.data.datainicio);
+    setHorarioinicio(resposta.data.horarioinicio);
+    setDatafinal(resposta.data.datafinal);
+    setHorariofinal(resposta.data.horariofinal);
+    setDatacadastro(resposta.data.datacadastro);
    })
       
      }
@@ -64,7 +64,7 @@ export default function editarlocacao(){
       if(i==0)
     {
       const banco =JSON.parse(localStorage.getItem("cd-usuarios") || "[]");
-      banco.push(usuario);
+      banco.push(locacao);
       localStorage.setItem("cd-usuarios",JSON.stringify(banco));
       alert("Locacao salva com sucesso");
       navigate('/listalocacao');
@@ -93,7 +93,7 @@ export default function editarlocacao(){
             <input 
                 type='text' 
                 value={id_cliente}
-                onChange={e=>setCliente(e.target.value)}
+                onChange={e=>setId_cliente(e.target.value)}
                 placeholder='Digite o nome do cliente'
              />
             <input 

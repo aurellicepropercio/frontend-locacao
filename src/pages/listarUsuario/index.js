@@ -11,6 +11,7 @@ import Head from '../../componentes/Head';
 import { useNavigate} from 'react-router-dom';
 import api from '../../server/api'
 
+
 export default function Listausuario(){
 const [dados,setDados] = useState([]);
 const [banco,setBanco] = useState([]);
@@ -71,7 +72,7 @@ const navigate=useNavigate();
         <div className='principal'>
         <Head title="Lista de Usuários" />
         <div>
-        <Link to="/cadastrousuario" className='btn-novo'>Novo Cadastro</Link>
+        <Link to="/cadastrousuario" className='btn-novo'>Novo</Link>
         </div>
         <table className="table">
            <tr>
@@ -94,14 +95,14 @@ const navigate=useNavigate();
                     </Link> 
                     </td>    
                     <td className='botoes'> 
-                          <FiTrash 
-                          size={18} 
+                          <FiTrash
+                          size={35} 
                           color='red'
-                          onClick={(e)=>apagar(linha.id)} 
+                           onClick={(e)=>apagar(linha.id_usuario)} 
                           /> 
                     </td>    
                     
-                  </tr>  
+                  </tr> 
                 )
                }) 
             }

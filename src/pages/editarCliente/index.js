@@ -36,7 +36,7 @@ export default function Editarcliente(){
    api.get(`/cliente/${id}`)
    .then((resposta)=>{
     setNomecliente(resposta.data.nomecliente);
-    setEnderco(resposta.data.endereco);
+    setEndereco(resposta.data.endereco);
     setContato(resposta.data.contato);
     setEmail(resposta.data.email);
     
@@ -50,7 +50,7 @@ export default function Editarcliente(){
       let i=0;
       if(nomecliente=="")
       i++;
-      else if(enderco=="")
+      else if(endereco=="")
       i++;
       else if(contato=="")
       i++;
@@ -92,19 +92,19 @@ export default function Editarcliente(){
                 type='text' 
                 value={endereco}
                 onChange={e=>setEndereco(e.target.value)}
-                placeholder='Informe o endereco'
+                placeholder='Informe o endereço'
              />
             <input 
                     type='number' 
                     value={contato}
                     onChange={e=>setContato(e.target.value)}
-                    placeholder='Digite o email' 
+                    placeholder='Digite o numero' 
             />
             <input 
                     type='email' 
                     value={email}
                     onChange={e=>setEmail(e.target.value)}
-                    placeholder='Digite o numero' 
+                    placeholder='Digite o email' 
             />
             
             <div className='acao'>

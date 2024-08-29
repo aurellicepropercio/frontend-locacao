@@ -8,7 +8,7 @@ import {useNavigate,useParams} from 'react-router-dom';
 import Head from '../../componentes/Head';
 import api from '../../server/api';
 
-export default function editarestabelecimento(){
+export default function EditarEstabelecimento(){
   let { id } = useParams();
   const navigate =useNavigate();
   const [descricao,setDescricao]  = useState("");
@@ -65,7 +65,7 @@ export default function editarestabelecimento(){
       if(i==0)
     {
       const banco =JSON.parse(localStorage.getItem("cd-usuarios") || "[]");
-      banco.push(usuario);
+      banco.push(estabelecimento);
       localStorage.setItem("cd-usuarios",JSON.stringify(banco));
       alert("Estabelecimento salvo com sucesso");
       navigate('/listaestabelecimento');

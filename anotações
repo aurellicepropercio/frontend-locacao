@@ -4,3 +4,32 @@ locacões: idestabelecimento - idcliente - valor - datainicio - horarioinicio -d
 clientes: nomecliente - endereco - contato - email
 
 pagamentos:
+
+
+
+bancos de dados "locacao"
+    tabelas:
+        cliente:
+            listarClientes - botoes(novo,editar e excluir) 
+            cadastrarCliente
+            editarCliente
+        estabelecimento:
+            listarEstabelecimentos  - botoes(novo,editar e excluir)
+            editarEstabelecimento
+            cadastrarEstabelecimento
+        locacoes:
+            listarLocacoes  - botoes(novo,editar e excluir)
+            editarLocacoes
+            cadastrarLocacoes
+        usuario:
+            listarUsuarios  - botoes(novo,editar e excluir)
+            editarUsuario
+            cadastroUsuario
+
+
+visão do projeto:
+tela principal - mostrar todos os estabelecimentos para serem alugados(fotos, descricao, contato e valor), haverá um botão para acessar a tela de login.
+
+login - acesso somente para quem tem autorização - adm do site e locador do imovel
+
+dashboard - area restrita apenas para os dois usuários mencionados acima. Nessa tela teremos o menu principal para acessar varias funcionalidades do sistema(usuarios, clientes, locações e estabelicimentos)

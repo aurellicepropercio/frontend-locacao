@@ -21,11 +21,17 @@
     margin: 5px;
     padding: 5px;
 }
-table{
+table {
     width: 100%;
     
     border-collapse: collapse;
+  
+    
 
+}
+table th{
+    text-align: center;
+  
 }
 td{
     border: solid 0.5px #adb9d3;
@@ -37,7 +43,7 @@ td{
     background-color: silver;
 }
 .btn-novo{
-   padding: 10px;
+   padding: 3px;
    background-color: green;
    color: #f8f8f8;
    border-radius: 5px;
@@ -45,7 +51,8 @@ td{
    margin-bottom: 10px;
    text-decoration: none;
    display: flex;
-   width: 120px;
+   width: 60px;
+   
 }
 .btn-novo:hover{
     background-color: rgb(55, 198, 55);

@@ -71,7 +71,7 @@ const navigate=useNavigate();
         <div className='principal'>
         <Head title="Lista de Locacao" />
         <div>
-        <Link to="/cadastrolocacao" className='btn-novo'>Novo Cadastro</Link>
+        <Link to="/cadastrolocacao" className='btn-novo'>Novo</Link>
         </div>
         <table className="table">
            <tr>
@@ -107,7 +107,7 @@ const navigate=useNavigate();
                     </td>    
                     <td className='botoes'> 
                           <FiTrash 
-                          size={18} 
+                          size={35} 
                           color='red'
                           onClick={(e)=>apagar(linha.id)} 
                           /> 

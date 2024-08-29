@@ -71,7 +71,7 @@ const navigate=useNavigate();
         <div className='principal'>
         <Head title="Lista de Estabelecimento" />
         <div>
-        <Link to="/cadastroestabelecimento" className='btn-novo'>Novo Cadastro</Link>
+        <Link to="/cadastroestabelecimento" className='btn-novo'>Novo</Link>
         </div>
         <table className="table">
            <tr>
@@ -80,7 +80,7 @@ const navigate=useNavigate();
                 <th>Valor</th>
                 <th>Localizacao</th>
                 <th>Contato</th>
-                <th>Responsavelr</th>
+                <th>Responsável</th>
                 <th>Foto</th>
                 <th></th>
                 <th></th>
@@ -94,7 +94,7 @@ const navigate=useNavigate();
                     <td>{linha.valor}</td>    
                     <td>{linha.localizacao}</td>    
                     <td>{linha.contato}</td>    
-                    <td>{linha.responsavel}</td>    
+                    <td>{linha.responsavel} </td>    
                     <td>{linha.foto}</td>    
                     <td className='botoes'> 
                     <Link to={`/editarestabelecimento/${linha.id}`}>
@@ -103,7 +103,7 @@ const navigate=useNavigate();
                     </td>    
                     <td className='botoes'> 
                           <FiTrash 
-                          size={18} 
+                          size={35} 
                           color='red'
                           onClick={(e)=>apagar(linha.id)} 
                           /> 
