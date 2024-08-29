@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom';
 import Head from '../../componentes/Head';
 import { useNavigate} from 'react-router-dom';
 import api from '../../server/api'
+import moment from 'moment/moment';
 
 export default function Listalocacao(){
 const [dados,setDados] = useState([]);
@@ -36,7 +37,13 @@ const navigate=useNavigate();
           alert("houve um erro ".err)
       })
     }
-  
+     
+
+    const formatarData=(data)=>{
+      const dataformatada = moment('2018-06-13 06:27:00').format('DD/MM/YYYY');;
+      return dataformatada
+
+    }
      const  apagar = (id) => {
       confirmAlert({
         title: 'Excluir Locacao',
@@ -95,11 +102,11 @@ const navigate=useNavigate();
                     <td>{linha.id_estabelecimento}</td>    
                     <td>{linha.id_cliente}</td>    
                     <td>{linha.valor}</td>    
-                    <td>{linha.datainicio}</td>    
+                    <td>{formatarData(linha.datainicio)}</td>    
                     <td>{linha.horarioinicio}</td>    
-                    <td>{linha.datafinal}</td>    
+                    <td>{formatarData(linha.datafinal)}</td>    
                     <td>{linha.horariofinal}</td>    
-                    <td>{linha.datacadastro}</td>    
+                    <td>{formatarData(linha.datacadastro)}</td>    
                     <td className='botoes'> 
                     <Link to={`/editarlocacao/${linha.id}`}>
                       <FiEdit size={18} color='#3a5795'  /> 
