@@ -6,7 +6,7 @@ import { MdCancel } from "react-icons/md";
 import {useNavigate, Link} from 'react-router-dom';
 import Head from '../../componentes/Head';
 import api from '../../server/api';
-
+// fazendo teste frontend
 export default function Cadastroestabelecimneto(){
     const navigate = useNavigate();
 
