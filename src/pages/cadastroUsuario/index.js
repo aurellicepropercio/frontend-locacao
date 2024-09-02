@@ -6,9 +6,7 @@ import { MdCancel } from "react-icons/md";
 import {useNavigate, Link} from 'react-router-dom';
 import Head from '../../componentes/Head';
 import api from '../../server/api';
-//alterei usuario 
-//fazendo mais um teste
-////fasdfa
+
 export default function Cadastrousuario(){
     const navigate = useNavigate();
 
