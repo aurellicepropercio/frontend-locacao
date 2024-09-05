@@ -22,7 +22,7 @@ const logar =(e)=>{
      api.post("/usuario/login",usuario)
      .then(resposta=>{
         alert(resposta.status)
-        if(resposta.status==200){
+        if(resposta.status==201){
             navigate('/dashboard');
         }
 

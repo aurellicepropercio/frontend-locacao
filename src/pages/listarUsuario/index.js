@@ -46,10 +46,23 @@ const navigate=useNavigate();
           {
             label: 'Sim',
             onClick: () => {
-              let dadosnovos = banco.filter(item => item.id !== id);
-              localStorage.setItem("cd-usuarios", JSON.stringify(dadosnovos));
-              setBanco(dadosnovos); // Atualiza o estado com os dados filtrados
-              alert(`Você apagou o usuário id:${id}`);
+              // let dadosnovos = banco.filter(item => item.id !== id);
+              // localStorage.setItem("cd-usuarios", JSON.stringify(dadosnovos));
+            
+              api.delete(`/usuario/${id}`)
+              .then((resposta)=>{
+                if(resposta.status==201)
+                {
+
+                  alert(`Você apagou o usuário id:${id}`);
+                  mostrardados();
+                }else{
+                  alert("Houve um problema!!!!")
+                }
+              })
+
+              //setBanco(dadosnovos); // Atualiza o estado com os dados filtrados
+             
             }
             
           },

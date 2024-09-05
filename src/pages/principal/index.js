@@ -3,6 +3,7 @@ import '../global.css'
 import {Link} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Logo from '../../assets/img/descansando.jpg'
+
 export default function Principal(){
     return(
         <div className="principal-container">
